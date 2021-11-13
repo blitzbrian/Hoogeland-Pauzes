@@ -1,0 +1,16 @@
+body { 
+    visibility: hidden;
+}
+input[type='number']::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+        opacity: 0;
+}
+.form-control {
+    margin: 20px;
+    margin-bottom: 0;
+    width: calc(100vw - 40px) !important;
+}
+
+.invalid-feedback {
+    margin-left: 20px
+}

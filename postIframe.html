@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onmessage = data => {
+            if(data.origin == 'https://isw.magister.net') {
+                if(data.data.password && data.data.username) {
+                    console.log(data.data)
+                    cookieStore.set('password', data.data.password);
+                    cookieStore.set('username', data.data.username);
+                } else if (data.data.days) {
+                    fetch('http://localhost:5500/set', {
+                        headers: new Headers({ 'content-type': 'application/json' }),
+                        mode: 'cors',
+                        method: 'POST',
+                         body: JSON.stringify({
+                            password: cookieStore.get('password'),
+                            username: cookieStore.get('username'),
+                            days: data.data.days,
+                        }),
+                    });
+                }
+            }
+        };
+    </script>
+</body>
+</html>
