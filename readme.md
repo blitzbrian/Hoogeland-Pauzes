@@ -3,6 +3,7 @@ Deze app berekend automatisch je pauzes.
 
 Je kan de app en bookmarklet vinden op: https://hoogeland-pauzes.ml
 
+
 Deze app kan je pauzes en minirooster pauzes berekenen.
 
 Laat zien of je een toets of huiswerk hebt.
