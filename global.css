@@ -15,6 +15,11 @@ input[type='number']::-webkit-inner-spin-button,
     margin-left: 20px
 }
 
+.spinner-grow {
+    position: absolute;
+    top: 30vh;
+}
+
 * {
     user-select: none;
 }
