@@ -20,7 +20,10 @@
                         username: data.data.username,
                         days: data.data.days,
                     }),
-                });
+                }).then(success => 
+                    success.text().then(success => {
+                        window.top.postMessage(success, '*');
+                    }));
             };
         </script>
     </body>
