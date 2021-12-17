@@ -1,5 +1,6 @@
 body { 
     visibility: hidden;
+    overscroll-behavior: none;
 }
 input[type='number']::-webkit-inner-spin-button,
     ::-webkit-outer-spin-button {
