@@ -3,12 +3,14 @@ Svelte,
 
 Sveltestrap,
 
-Bootstrap,
+Svelte-routing,
 
-Svelterouter.
+Anchorme.
 
 # Setup
 ```
 git clone git@github.com:dazerstudio/Hoogeland-Pauzes.git
+.......
 npm i
+.......
 ```
