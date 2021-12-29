@@ -1,8 +1,11 @@
 # Dingen gebruikt:
 Svelte,
+
 Sveltestrap,
+
 Bootstrap,
-Svelterouter
+
+Svelterouter.
 
 # Setup
 ```
