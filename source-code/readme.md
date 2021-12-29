@@ -1,10 +1,10 @@
-#Dingen gebruikt:
+##Dingen gebruikt:
 Svelte,
 Sveltestrap,
 Bootstrap,
 Svelterouter
 
-#Setup
+##Setup
 ```
 npm i
 ```
