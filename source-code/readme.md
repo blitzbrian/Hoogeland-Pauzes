@@ -9,8 +9,8 @@ Anchorme.
 
 # Setup
 ```
-git clone git@github.com:dazerstudio/Hoogeland-Pauzes.git
+> git clone git@github.com:dazerstudio/Hoogeland-Pauzes.git
 .......
-npm i
+> npm i
 .......
 ```
