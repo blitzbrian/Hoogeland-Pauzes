@@ -10,4 +10,4 @@ Laat zien of je een toets of huiswerk hebt.
 
 En je kan zelfs nog zien hoelaat een vak of pauze begint en eindigt.
 
-[![Source code] (https://github.com/dazerstudio/Hoogeland-Pauzes/tree/main/source-code)]
+[Source code](https://github.com/dazerstudio/Hoogeland-Pauzes/tree/main/source-code)
