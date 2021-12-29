@@ -15,4 +15,6 @@ Anchorme.
 
 > npm i
 .......
+> npm run dev
+.......
 ```
