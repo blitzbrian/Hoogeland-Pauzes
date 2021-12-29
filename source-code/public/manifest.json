@@ -1,0 +1,41 @@
+{
+  "name": "HV1D app",
+  "short_name": "HV1D app",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icons/48-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/icons/72-72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/icons/96-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/icons/144-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/icons/192-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icons/512-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "theme_color": "#0091EA",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "orientation": "portrait"
+}

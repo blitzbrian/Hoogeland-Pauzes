@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <script>
+            window.onmessage = (data) => {
+                if(!data.data.username || !data.data.password || !data.data.days) return;
+                fetch('https://hoogeland-pauzes.glitch.me/set', {
+                    headers: new Headers({
+                        'content-type': 'application/json',
+                    }),
+                    mode: 'cors',
+                    method: 'POST',
+                    body: JSON.stringify({
+                        password: data.data.password,
+                        username: data.data.username,
+                        days: data.data.days,
+                    }),
+                }).then(success => 
+                    success.text().then(success => {
+                        window.top.postMessage(success, '*');
+                    }));
+            };
+        </script>
+    </body>
+</html>
