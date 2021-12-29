@@ -9,3 +9,5 @@ Deze app kan je pauzes en minirooster pauzes berekenen.
 Laat zien of je een toets of huiswerk hebt.
 
 En je kan zelfs nog zien hoelaat een vak of pauze begint en eindigt.
+
+Source code:
