@@ -11,6 +11,8 @@ Anchorme.
 ```
 > git clone git@github.com:dazerstudio/Hoogeland-Pauzes.git
 .......
+> cd source-code
+
 > npm i
 .......
 ```
