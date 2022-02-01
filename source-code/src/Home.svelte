@@ -89,7 +89,7 @@
                     subjects[
                         subjects.indexOf(subject) + 1
                     ].dontAllowStroom2 = true;
-                if (!subject.dontAllowStroom2 && lesuur == 8 && subjects[subjects.indexOf(subject) + 1] == null)
+                if (!subject.dontAllowStroom2 && lesuur == 8 && subjects[subjects.indexOf(subject) + 1] == null && !minirooster)
                     subject.end -= 900000;
                 console.log(subject);
                 return subject;
