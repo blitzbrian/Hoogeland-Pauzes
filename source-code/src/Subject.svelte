@@ -30,7 +30,7 @@
             .substring(0, 5)}
     </ModalBody>
 </Modal>
-{#if ((subject.grotePauze1 || subject.grotePauze2) && !subject.minirooster) || subject.miniroosterPauze1 || subject.miniroosterPauze2}
+{#if (((subject.grotePauze1 || subject.grotePauze2) && !subject.minirooster) || subject.miniroosterPauze1 || subject.miniroosterPauze2)}
     <li class="list-group-item" on:click={togglePauze}>Grote pauze</li>
 {:else if (subject.stroom1 || subject.stroom2) && !subject.minirooster}
     <li class="list-group-item" on:click={togglePauze}>Pauze</li>
@@ -56,8 +56,8 @@
             <Badge pill color="info">Toets</Badge>
         {/if}
     </ModalHeader>
-    <ModalBody
-        >{subject.description ? `Het vak ${subject.description}` : 'Dit vak'} begint
+    <ModalBody>
+    {subject.description ? `Het vak ${subject.description}` : 'Dit vak'} begint
         om {new Date(subject.start).toLocaleTimeString().substring(0, 5)},
         <br />
         En eindigt om {new Date(subject.end)
