@@ -68,12 +68,14 @@
                     minirooster2locatie &&
                     minirooster && !subject.dontAllowStroom2;
                 if (stroom1 && !minirooster) subject.start += 900000;
-                else if (grotePauze1 || miniroosterPauze1)
+                else if (grotePauze1 && !minirooster)
                     subject.start += 1800000;
                 else if (stroom2 && !minirooster)
                     subjects[subjects.indexOf(subject) - 1].end -= 900000;
-                else if (grotePauze2 || miniroosterPauze2)
+                else if (grotePauze2 && !minirooster)
                     subjects[subjects.indexOf(subject) - 1].end -= 1800000;
+                else if (minirooster && (miniroosterPauze1 || miniroosterPauze2) && new Date(subject.end).getMinutes() == new Date(subject.start).getMinutes()) subject.start += 1800000;
+                else if (minirooster && (miniroosterPauze1 || miniroosterPauze2) && new Date(subjects[subjects.indexOf(subject) - 1].end).getMinutes() == new Date(subjects[subjects.indexOf(subject) - 1].start).getMinutes()) subjects[subjects.indexOf(subject) - 1].end -= 1800000;
                 subject.stroom1 = stroom1;
                 subject.stroom2 = stroom2;
                 subject.grotePauze1 = grotePauze1;
@@ -81,7 +83,6 @@
                 subject.minirooster = minirooster;
                 subject.miniroosterPauze1 = miniroosterPauze1;
                 subject.miniroosterPauze2 = miniroosterPauze2;
-                console.log(miniroosterPauze1, miniroosterPauze2);
                 if (
                     (((grotePauze1 || stroom1) && !minirooster) || miniroosterPauze1) &&
                     subjects[subjects.indexOf(subject) + 1]
@@ -91,7 +92,6 @@
                     ].dontAllowStroom2 = true;
                 if (!subject.dontAllowStroom2 && lesuur == 8 && subjects[subjects.indexOf(subject) + 1] == null && !minirooster)
                     subject.end -= 900000;
-                console.log(subject);
                 return subject;
             });
             day.subjects.forEach(
