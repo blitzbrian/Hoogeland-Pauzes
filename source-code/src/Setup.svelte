@@ -1,7 +1,8 @@
 <script>
     import { Modal, ModalBody } from 'sveltestrap';
     import { Link } from 'svelte-routing';
-    let warning = navigator.userAgentData.mobile;
+    let mobile = navigator.userAgent.toLowerCase().includes('mobile');
+    let warning = mobile;
     const done = () => {
         if ((warning = true)) {
             warning = false;
@@ -10,7 +11,7 @@
     };
 </script>
 
-<div hidden={navigator.userAgentData.mobile}>
+<div hidden={mobile}>
     <div class="mt-3 d-flex justify-content-center">
         <!-- svelte-ignore a11y-invalid-attribute -->
         <a
@@ -19,7 +20,7 @@
         >
     </div>
     <div class="mt-3 d-flex justify-content-center">
-        <h6>Sleep deze knop hierboven op je bookmark balk om te instaleeren</h6>
+        <h6>Sleep deze knop hierboven op je werk/bladwijzer balk om te instaleeren</h6>
     </div>
     <div class="mt-3 d-flex justify-content-center">
         <h6>
