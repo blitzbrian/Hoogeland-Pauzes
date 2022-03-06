@@ -83,7 +83,7 @@
 </script>
 
 <p class="mt-4 justify-content-center d-flex flex-row">
-    {#if navigator.userAgentData.mobile}
+    {#if navigator.userAgent.toLowerCase().includes('mobile')}
         Log in om door te gaan.
     {:else}
         Log in of maak een nieuw account om door te gaan
