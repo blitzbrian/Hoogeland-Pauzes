@@ -1,8 +1,8 @@
 <script>
     import { onMount } from 'svelte';
     import { Link } from 'svelte-routing';
-    import Subject from './Subject.svelte';
-    import { Accordion, AccordionItem } from 'sveltestrap';
+    import { Accordion } from 'sveltestrap';
+    import Day from "./Day.svelte";
     let days = [];
     onMount(async () => {
         if (
@@ -111,32 +111,7 @@
 <Accordion>
     {#if days}
         {#each days as day}
-            <AccordionItem
-                active={new Date(day.day).toLocaleDateString() ==
-                    new Date().toLocaleDateString()}
-                class="list-group"
-                header={new Date(day.day)
-                    .toLocaleString('nl-NL', {
-                        weekday: 'long',
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric',
-                    })
-                    .charAt(0)
-                    .toUpperCase() +
-                    new Date(day.day)
-                        .toLocaleString('nl-NL', {
-                            weekday: 'long',
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                        })
-                        .slice(1)}
-            >
-                {#each day.subjects as subject}
-                    <Subject {subject} subjects={day.subjects} />
-                {/each}
-            </AccordionItem>
+            <Day {day} />
         {/each}
     {:else}
         <div class="text-center">
